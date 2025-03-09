@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IGNOU Term End Exam Results</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+        }
+
+        .header {
+            background-color: #0d4e95;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 70vh;
+        }
+
+        .login-box {
+            width: 350px;
+            border: 1px solid #ccc;
+            padding: 20px;
+            text-align: center;
+            border-radius: 5px;
+            background: #f8f8f8;
+        }
+
+        .login-box select,
+        .login-box input {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .login-box button {
+            width: 95%;
+            padding: 10px;
+            background: #0d4e95;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .login-box button:hover {
+            background: #093b72;
+        }
+
+        .note {
+            font-size: 12px;
+            color: red;
+        }
+
+        .footer {
+            background-color: #0d4e95;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .logo {
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            width: 150px;
+        }
+
+        .naac-badge {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <img src="r.png" alt="IGNOU Logo" class="logo">
+    <div class="header">
+        INDIRA GANDHI NATIONAL OPEN UNIVERSITY<br>
+        TERM END EXAM RESULTS
+    </div>
+    
+    <div class="container">
+        <div class="login-box">
+            <h3>Student Login</h3>
+            <form action="fetch_results.php" method="POST">
+                <label>TEE RESULT FOR: *</label>
+                <select name="tee_result">
+                    <option>DECEMBER 2024 RE-EVALUATION RESULT</option>
+                </select>
+
+                <label>ENROLMENT NO: *</label>
+                <input type="text" name="enrollment_no" placeholder="Enter Enrolment No." required>
+                <button type="submit">Search</button>
+            </form>
+
+            <p class="note">
+                Note: In case any student is found to be booked under unfair means, the result of the particular student will be Cancelled.
+            </p>
+        </div>
+    </div>
+
+    <div class="footer">
+        Indira Gandhi National Open University. All Rights Reserved.<br>
+        Designed, Developed and Maintained by SDC, Computer Division.
+    </div>
+
+    <img src="naac.png" alt="NAAC Badge" class="naac-badge">
+</body>
+</html>
